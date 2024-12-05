@@ -29,7 +29,7 @@ func getFileData() (*os.File, *bufio.Scanner) {
 }
 
 func checkUpdatesOrder(rules []string, updates []string) bool {
-	for i, _ := range updates {
+	for i := range updates {
 		ele := updates[i]
 		for j := i + 1; j < len(updates); j++ {
 			check := updates[j] + "|" + string(ele)
